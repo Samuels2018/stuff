@@ -35,10 +35,8 @@ const register = (first_name, email, password, password_confirm) => {
 // Backend
 const login = (email, password) => {
   var bodyFormData = new FormData();
-  bodyFormData.append("email", email);
-  bodyFormData.append("password", password);
-  console.log(bodyFormData);
-
+  bodyFormData.set("email", email);
+  bodyFormData.set("password", password);
   return clientAxios
     .post("/login", bodyFormData, {
       headers: { "Content-Type": "multipart/form-data" },

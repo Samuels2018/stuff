@@ -37,10 +37,8 @@ export default function Login(props) {
   });
 
   const handleLogin = (values) => {
-    console.log(values);
-    const { email, password } = values;
     setLoading(true);
-    dispatch(login(email, password))
+    dispatch(login(values))
       .unwrap()
       .then(() => {
         navigate("/");
