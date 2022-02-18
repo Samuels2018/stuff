@@ -1,4 +1,5 @@
 import clientAxios from "../config/axios";
+import Cookies from "js-cookie";
 
 const register = (first_name, email, password, password_confirm) => {
   var bodyFormData = new FormData();
@@ -8,7 +9,7 @@ const register = (first_name, email, password, password_confirm) => {
   bodyFormData.set("password_confirm", password_confirm);
 
   return clientAxios
-    .post("/signup", bodyFormData, {
+    .post("/sign-up", bodyFormData, {
       headers: { "Content-Type": "multipart/form-data" },
     })
     .then((response) => {
@@ -35,6 +36,7 @@ const register = (first_name, email, password, password_confirm) => {
 // Backend
 const login = (email, password) => {
   var bodyFormData = new FormData();
+
   bodyFormData.set("email", email);
   bodyFormData.set("password", password);
   return clientAxios
@@ -42,7 +44,11 @@ const login = (email, password) => {
       headers: { "Content-Type": "multipart/form-data" },
     })
     .then((response) => {
+      console.log(response.data);
       if (response.data.status === 200) {
+        let token = Cookies.get("remember_token");
+        console.log(token);
+        console.log(response.data);
         localStorage.setItem("user", JSON.stringify({ token: true }));
         console.log(response.data);
       }
