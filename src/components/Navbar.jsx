@@ -11,6 +11,7 @@ import LogoLaser from "../assets/laser.png";
 import Language from "./Language";
 import { useTranslation } from "react-i18next";
 
+
 // Funciones Auxiliares
 const truncateAddress = (address) => {
   return address.slice(0, 6) + "..." + address.slice(-5);
@@ -493,31 +494,16 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
                 {/* Profile dropdown */}
-                {userAuth.isLoggedIn ? (
+                
                   <>
                     {!isUnlocked
                       ? unlockWalletButton()
                       : currentAccount
                       ? walletInfo()
                       : connectWalletButton()}
-                    <button
-                      type="button"
-                      className="bg-slate-800 p-1 rounded-full text-slate-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white"
-                    >
-                      <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
+                    
                     <Menu as="div" className="ml-3 relative">
-                      <div>
-                        <Menu.Button className="bg-slate-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white">
-                          <span className="sr-only">Open user menu</span>
-                          <img
-                            className="h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt=""
-                          />
-                        </Menu.Button>
-                      </div>
+                      
                       <Transition
                         as={Fragment}
                         enter="transition ease-out duration-100"
@@ -554,40 +540,18 @@ export default function Navbar() {
                               </a>
                             )}
                           </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
-                              <a
-                                href="/"
-                                onClick={handleLogout}
-                                className={classNames(
-                                  active ? "bg-slate-100" : "",
-                                  "block px-4 py-2 text-sm text-slate-700"
-                                )}
-                              >
-                                {t("LOGOUT")}
-                              </a>
-                            )}
-                          </Menu.Item>
+
+                        {/*aqui iba el logout*/}
+                          
                         </Menu.Items>
                       </Transition>
                     </Menu>
                   </>
-                ) : (
-                  <>
-                    <Link
-                      to="/login"
-                      className="text-base font-medium text-white hover:text-gray-300"
-                    >
-                      {t("LOGIN")}
-                    </Link>
-                    <Link
-                      to="/register"
-                      className="inline-flex items-center px-3 py-2 ml-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
-                    >
-                      {t("SIGNUP")}
-                    </Link>
-                  </>
-                )}
+                {/*aqui iba el el login y register*/}
+
+
+                {/*aqui iba el logo de la imagen de usuario*/}
+
               </div>
               <Language />
             </div>
@@ -618,3 +582,56 @@ export default function Navbar() {
     </Disclosure>
   );
 }
+
+
+/*
+logo de la imagen d usuario
+<div>
+                        <Menu.Button className="bg-slate-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-800 focus:ring-white">
+                          <span className="sr-only">Open user menu</span>
+                          <img
+                            className="h-8 w-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt=""
+                          />
+                        </Menu.Button>
+                      </div>
+
+logout
+
+<Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="/"
+                                onClick={handleLogout}
+                                className={classNames(
+                                  active ? "bg-slate-100" : "",
+                                  "block px-4 py-2 text-sm text-slate-700"
+                                )}
+                              >
+                                {t("LOGOUT")}
+                              </a>
+                            )}
+                          </Menu.Item>
+
+login
+
+<>
+                    <Link
+                      to="/login"
+                      className="text-base font-medium text-white hover:text-gray-300"
+                    >
+                      {t("LOGIN")}
+                    </Link>
+                    <Link
+                      to="/register"
+                      className="inline-flex items-center px-3 py-2 ml-2 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
+                    >
+                      {t("SIGNUP")}
+                    </Link>
+                  </>
+
+
+            campana de notificacion
+
+*/

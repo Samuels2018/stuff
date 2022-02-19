@@ -1,7 +1,7 @@
 import React from 'react';
-import Img01 from '../assets/imgNFT/L_122024_laser-airlines.jpg';
-import Img02 from '../assets/imgNFT/Laser-Airlines-MD-80.jpg';
-import Img03 from '../assets/imgNFT/LASER-Airlines-MD-Venezuela.jpg';
+import Img01 from '../assets/imgNFT/a5.png';
+import Img02 from '../assets/imgNFT/a3.png';
+import Img03 from '../assets/imgNFT/a6.png';
 
 const Comprar = () => {
 
