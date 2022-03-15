@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Learn Redux",
+      "price": 30
+    },
+    {
+      "id": 2,
+      "name": "React Redux",
+      "price": 40
+    },
+    {
+      "name": "a",
+      "price": "12",
+      "id": 3
+    },
+    {
+      "name": "a",
+      "price": "12",
+      "id": 4
+    }
+  ]
+}

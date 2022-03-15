@@ -1,0 +1,49 @@
+<nav className='navbar navbar-expand-lg navbar-dark bg-primary justify-content-between d-flex'>
+	<h1>CRUD - React, Redux, REST API & Axios</h1>
+	<button type='button' className='btn btn-danger nuevo-post'>Add Product &#43;</button>
+</nav>
+
+<div className='row justify-content-center mt-5'>
+	<div className='col-md-8'>
+		<div className='card'>
+			<div className='card-body'>
+				<h2 className='text-center mb-4 font-weight-bold'>Add New Product</h2>
+				<form>
+					<div className='form-group'>
+						<label>Name Product</label>
+						<input type='text' className='form-control' placeholder='Name Product' />
+					</div>
+
+					<div>
+						<label>Price Product</label>
+						<input type='number' className='form-control' placeholder='Price Product' />
+					</div>
+					<button type='submit' className='btn btn-primary font-weight-bold
+					text-uppercase d-block w-100'>Add</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h2 className='text-center my-5'>List Products</h2>
+<table className='table table-striped'>
+	<thead className='bg-primary table-dark'>
+		<tr>
+			<td scope='col'>Name</td>
+			<td scope='col'>Price</td>
+			<td scope='col'>Actions</td>
+		</tr>
+	</thead>
+	<tbody>
+		
+	</tbody>
+</table>
+
+<tr>
+	<td>{product.name}</td>
+	<td><span className='font-weight-bold'>$ {product.price}</span></td>
+	<td className='acciones'>{product.name}</td>
+</tr>
+
+<div></div>
