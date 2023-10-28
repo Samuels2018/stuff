@@ -1,0 +1,6 @@
+    1 0.000000000 192.168.250.3 → 224.0.0.251  MDNS 70 Standard query 0x0000 A wpad.local, "QM" question
+    2 0.205916217 192.168.250.3 → 192.168.255.255 NBNS 92 Name query NB WPAD<00>
+    3 0.820344593 192.168.250.3 → 192.168.255.255 NBNS 92 Name query NB WPAD<00>
+    4 1.741916732 192.168.250.3 → 192.168.255.255 NBNS 92 Name query NB WPAD<00>
+    5 5.290293489 192.168.250.4 → 224.0.0.251  MDNS 103 Standard query 0x00d4 PTR _233637DE._sub._googlecast._tcp.local, "QM" question PTR _googlecast._tcp.local, "QM" question
+    6 8.939132327 192.168.250.3 → 224.0.0.251  MDNS 70 Standard query 0x0000 A wpad.local, "QM" question
